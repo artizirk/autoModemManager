@@ -1,0 +1,7 @@
+[Match]
+Name=enp0s29f7* ww*
+
+[Network]
+DHCP=v4
+IPForward=yes
+IPMasquerade=yes

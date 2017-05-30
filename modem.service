@@ -1,0 +1,15 @@
+[Unit]
+Description=Auto connect a modem
+#Requires=ModemManager.service
+#After=ModemManager.service
+
+[Service]
+StandardOutput=journal
+StandardError=journal
+ExecStart=/usr/local/bin/modem.py
+Restart=always
+RestartSec=10s
+StartLimitInterval=0
+
+[Install]
+WantedBy=multi-user.target
